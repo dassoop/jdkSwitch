@@ -94,6 +94,7 @@
 {
     -fx-background-color:transparent;
     -fx-pref-width: 16.5;
+    -fx-pref-height: 16.5;
     -fx-padding: 2;
 }
 
