@@ -2,11 +2,13 @@ package com.dassoop.jdkswitchapp;
 
 import com.dassoop.jdkswitchapp.services.FilesService;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.DirectoryChooser;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
@@ -44,11 +46,10 @@ public class MainController implements Initializable
     @Override
     public void initialize(URL arg0, ResourceBundle arg1)
     {
+        //Set default directory to mac JVM directory location and return the jdk's within
         File dir = new File("/Library/Java/JavaVirtualMachines");
         directory = dir.getAbsolutePath();
         File[] listOfContents = dir.listFiles();
-
-
         Arrays.sort(listOfContents);
         listView.getItems().clear();
         listView.getItems().addAll(filesService.getFileNames(listOfContents));
@@ -56,6 +57,7 @@ public class MainController implements Initializable
         lblDirectory.setText(dir.getAbsolutePath());
         lblDirectory.setText(directory);
 
+        //Add java version to label
         try
         {
             lblVersion.setText(this.checkJavaVersion());
@@ -64,6 +66,16 @@ public class MainController implements Initializable
         {
             e.printStackTrace();
         }
+
+        //Add list cell onClick event for copy function
+        listView.setOnMouseClicked(new EventHandler<MouseEvent>() {
+
+            @Override
+            public void handle(MouseEvent event) {
+                System.out.println("clicked on " + listView.getSelectionModel().getSelectedItem());
+                copyExportCommand();
+            }
+        });
     }
 
     public void chooseDirectory(ActionEvent event)
@@ -74,6 +86,7 @@ public class MainController implements Initializable
         Stage thisStage = (Stage) node.getScene().getWindow();
 
         File dir = dirChooser.showDialog(thisStage);
+        if(dir==null) return;
         directory = dir.getAbsolutePath();
         File[] listOfContents = dir.listFiles();
 

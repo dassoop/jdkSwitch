@@ -6,24 +6,23 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.dassoop.jdkswitchapp.MainController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="control-panel" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.dassoop.jdkswitchapp.MainController">
     <children>
-        <Pane prefHeight="400.0" prefWidth="190.0" styleClass="control-panel" stylesheets="@style.css">
+        <Pane layoutY="35.0" prefHeight="365.0" prefWidth="137.0" styleClass="control-panel" stylesheets="@style.css">
             <children>
-                <Label layoutX="8.0" layoutY="11.0" text="Current Version:" />
-                <Button layoutX="33.0" layoutY="68.0" mnemonicParsing="false" onAction="#copyExportCommand" text="Copy Command" />
-                <Label fx:id="lblVersion" layoutX="8.0" layoutY="34.0" prefHeight="16.0" prefWidth="158.0" text="Test Text" />
-            <Button layoutX="35.0" layoutY="356.0" mnemonicParsing="false" onAction="#chooseDirectory" text="Change Directory" />
+            <Button layoutX="8.0" layoutY="331.0" mnemonicParsing="false" onAction="#chooseDirectory" text="Change Directory" />
             </children></Pane>
-        <Pane layoutX="190.0" layoutY="-1.0" prefHeight="401.0" prefWidth="411.0" styleClass="main-panel" stylesheets="@style.css">
+        <Pane layoutX="137.0" layoutY="35.0" prefHeight="365.0" prefWidth="463.0" styleClass="main-panel" stylesheets="@style.css">
          <children>
-            <ListView fx:id="listView" prefHeight="370.0" prefWidth="411.0" stylesheets="@style.css" />
-            <Pane layoutY="370.0" prefHeight="31.0" prefWidth="411.0" styleClass="directory-panel">
+            <ListView fx:id="listView" prefHeight="336.0" prefWidth="463.0" stylesheets="@style.css" />
+            <Pane layoutY="332.0" prefHeight="33.0" prefWidth="463.0" styleClass="directory-panel">
                <children>
                   <Label layoutX="7.0" layoutY="6.0" text="Directory: " />
                   <Label fx:id="lblDirectory" layoutX="79.0" layoutY="6.0" prefHeight="16.0" prefWidth="324.0" />
                </children>
             </Pane>
          </children></Pane>
+          <Label layoutX="5.0" layoutY="11.0" text="Version at load:" />
+          <Label fx:id="lblVersion" layoutX="118.0" layoutY="11.0" prefHeight="16.0" prefWidth="469.0" text="Test Text" />
     </children>
 </AnchorPane>

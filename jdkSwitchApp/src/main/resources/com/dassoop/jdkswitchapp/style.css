@@ -38,6 +38,8 @@
     .main-panel .list-view
     {
         -fx-background-color: transparent;
+        -fx-border-width: 1 0 0 0;
+        -fx-border-color: black;
     }
     .main-panel .list-cell
     {
@@ -63,7 +65,7 @@
 .directory-panel
 {
     -fx-background-color: transparent;
-    -fx-border-width: 1 0 0 0;
+    -fx-border-width: 1 0 1 0;
     -fx-border-color: black;
 }
 /*=============================================*/
