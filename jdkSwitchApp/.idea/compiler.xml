@@ -13,9 +13,4 @@
       <module name="jdkSwitchApp" target="11" />
     </bytecodeTargetLevel>
   </component>
-  <component name="JavacSettings">
-    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="jdkSwitchApp" options="--add-exports java.datatransfer/java.awt=com.dassoop.jdkswitchapp" />
-    </option>
-  </component>
 </project>

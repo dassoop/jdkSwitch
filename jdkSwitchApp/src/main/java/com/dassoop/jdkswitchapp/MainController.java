@@ -7,22 +7,20 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
-import javafx.scene.input.Clipboard;
 import javafx.stage.DirectoryChooser;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.awt.datatransfer.Clipboard;
+import java.awt.datatransfer.StringSelection;
+import java.io.*;
 import java.net.URL;
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.ResourceBundle;
 
-//import java.awt.*;
+import java.awt.*;
 
 public class MainController implements Initializable
 {
@@ -116,10 +114,10 @@ public class MainController implements Initializable
         String cmd = "export JAVA_HOME=" + directory + "/" + fileName + "/Contents/Home";
         System.out.println(cmd);
 
-//        Toolkit toolkit = Toolkit.getDefaultToolkit();
-//        Clipboard clipboard = toolkit.getSystemClipboard();
-//        StringSelection strSel = new StringSelection(str);
-//        clipboard.setContents(strSel, null);
+        Toolkit toolkit = Toolkit.getDefaultToolkit();
+        Clipboard clipboard = toolkit.getSystemClipboard();
+        StringSelection strSel = new StringSelection(cmd);
+        clipboard.setContents(strSel, null);
 
     }
 
@@ -136,5 +134,19 @@ public class MainController implements Initializable
             System.out.println(line);
         }
     }
+
+//    public void openTermnial() throws IOException
+//    {
+//        System.out.println("Test");
+////        Runtime.getRuntime().exec("/usr/bin/open -a Terminal /path/to/the/executable");
+//        Console console = System.console();
+//        if(console == null && !GraphicsEnvironment.isHeadless()){
+//            String filename = Main.class.getProtectionDomain().getCodeSource().getLocation().toString().substring(6);
+//            Runtime.getRuntime().exec(new String[]{"cmd","/c","start","cmd","/k","java -jar \"" + filename + "\""});
+//        }else{
+//            Main.main(new String[0]);
+//            System.out.println("Program has ended, please type 'exit' to close the console");
+//        }
+//    }
 
 }
