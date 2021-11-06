@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.dassoop.jdkswitchapp.MainController">
+    <children>
+        <Pane prefHeight="400.0" prefWidth="190.0" styleClass="control-panel" stylesheets="@style.css">
+            <children>
+                <Label layoutX="48.0" layoutY="14.0" text="Current Version:" />
+                <Button layoutX="40.0" layoutY="75.0" mnemonicParsing="false" text="Choose Version" />
+                <Label layoutX="56.0" layoutY="37.0" text="jdk-11.0.2.jdk" />
+            <Button layoutX="35.0" layoutY="356.0" mnemonicParsing="false" text="Change Directory" />
+            </children></Pane>
+        <Pane layoutX="190.0" layoutY="-1.0" prefHeight="401.0" prefWidth="411.0" styleClass="main-panel" stylesheets="@style.css">
+         <children>
+            <ListView fx:id="listView" prefHeight="346.0" prefWidth="411.0" stylesheets="@style.css" />
+            <Pane layoutY="346.0" prefHeight="55.0" prefWidth="411.0" styleClass="directory-panel">
+               <children>
+                  <Label layoutX="7.0" layoutY="6.0" text="Directory: " />
+               </children>
+            </Pane>
+         </children></Pane>
+    </children>
+</AnchorPane>

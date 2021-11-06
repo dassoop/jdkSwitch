@@ -1,0 +1,109 @@
+*
+{
+    -fx-font-family: "Arial";
+}
+
+/*============================================*/
+/*===========Control Panel====================*/
+.control-panel
+{
+    -fx-background-color: #2d2e30;
+    -fx-border-color: black;
+}
+    .control-panel .label
+    {
+        -fx-text-fill: white;
+    }
+    .control-panel .button
+    {
+        -fx-background-color: #545657;
+        -fx-text-fill: white;
+    }
+    .control-panel .button:pressed
+    {
+        -fx-background-color: #5301e1;
+    }
+
+/*============================================*/
+/*===========Main Panel=======================*/
+.main-panel
+{
+    -fx-background-color: #1f2124;
+    -fx-text-fill: white;
+}
+    .main-panel .label
+    {
+        -fx-text-fill: white;
+    }
+    .main-panel .list-view
+    {
+        -fx-background-color: transparent;
+    }
+    .main-panel .list-cell
+    {
+        -fx-background-color: transparent;
+        -fx-text-fill: white;
+    }
+    .main-panel .list-cell:selected
+    {
+        -fx-text-fill: #5301e1;
+    }
+    .main-panel .list-cell
+    {
+        -fx-text-fill: white;
+    }
+    .main-panel .list-cell:even
+    {
+        -fx-background-color: #1f2124;
+    }
+    .main-panel .list-cell:odd
+    {
+        -fx-background-color: #2d2e30;
+    }
+.directory-panel
+{
+    -fx-background-color: transparent;
+    -fx-border-width: 1 0 0 0;
+    -fx-border-color: black;
+}
+/*=============================================*/
+/*===========Scroll Bars=======================*/
+
+.scroll-bar:horizontal .track,
+.scroll-bar:vertical .track
+{
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-background-radius: 0em;
+}
+
+.scroll-bar:horizontal .thumb,
+.scroll-bar:vertical .thumb
+{
+    -fx-background-color: gray;
+    -fx-background-radius: 5em;
+
+}
+
+.scroll-pane
+{
+    -fx-background-color: black;
+}
+
+.scroll-bar:horizontal, .scroll-bar:vertical
+{
+    -fx-background-color:transparent;
+    -fx-pref-width: 16.5;
+    -fx-padding: 2;
+}
+
+.increment-button, .decrement-button
+{
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.corner
+{
+    -fx-background-color: #2a2e32;
+}
