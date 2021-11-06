@@ -10,10 +10,11 @@
     <children>
         <Pane prefHeight="400.0" prefWidth="190.0" styleClass="control-panel" stylesheets="@style.css">
             <children>
-                <Label layoutX="48.0" layoutY="14.0" text="Current Version:" />
-                <Button layoutX="40.0" layoutY="75.0" mnemonicParsing="false" text="Choose Version" />
-                <Label layoutX="56.0" layoutY="37.0" text="jdk-11.0.2.jdk" />
+                <Label layoutX="8.0" layoutY="11.0" text="Current Version:" />
+                <Button layoutX="37.0" layoutY="113.0" mnemonicParsing="false" onAction="#copyExportCommand" text="Copy Command" />
+                <Label fx:id="lblVersion" layoutX="8.0" layoutY="34.0" prefHeight="16.0" prefWidth="158.0" text="Test Text" />
             <Button layoutX="35.0" layoutY="356.0" mnemonicParsing="false" onAction="#chooseDirectory" text="Change Directory" />
+            <Button layoutX="39.0" layoutY="77.0" mnemonicParsing="false" onAction="#checkJavaVersion" prefHeight="24.0" prefWidth="110.0" text="Refresh" />
             </children></Pane>
         <Pane layoutX="190.0" layoutY="-1.0" prefHeight="401.0" prefWidth="411.0" styleClass="main-panel" stylesheets="@style.css">
          <children>
