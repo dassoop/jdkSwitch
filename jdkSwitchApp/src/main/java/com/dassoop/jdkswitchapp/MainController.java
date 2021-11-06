@@ -72,7 +72,7 @@ public class MainController implements Initializable
 
             @Override
             public void handle(MouseEvent event) {
-                System.out.println("clicked on " + listView.getSelectionModel().getSelectedItem());
+//                System.out.println("clicked on " + listView.getSelectionModel().getSelectedItem());
                 copyExportCommand();
             }
         });

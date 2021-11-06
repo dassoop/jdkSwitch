@@ -15,7 +15,7 @@
         <Pane layoutX="137.0" layoutY="35.0" prefHeight="365.0" prefWidth="463.0" styleClass="main-panel" stylesheets="@style.css">
          <children>
             <ListView fx:id="listView" prefHeight="336.0" prefWidth="463.0" stylesheets="@style.css" />
-            <Pane layoutY="332.0" prefHeight="33.0" prefWidth="463.0" styleClass="directory-panel">
+            <Pane layoutY="335.0" prefHeight="30.0" prefWidth="463.0" styleClass="directory-panel">
                <children>
                   <Label layoutX="7.0" layoutY="6.0" text="Directory: " />
                   <Label fx:id="lblDirectory" layoutX="79.0" layoutY="6.0" prefHeight="16.0" prefWidth="324.0" />
