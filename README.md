@@ -12,3 +12,5 @@ Project is created with:
 * JavaFX Version: 17.0.1
 * IDE: IntelliJ 
 * Build: Maven
+
+![](GitHub_jdkSwitch.png)
